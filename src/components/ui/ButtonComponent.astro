@@ -1,0 +1,11 @@
+---
+export interface  Props {
+    text: string;
+    url: string;
+}
+
+const {text, url} = Astro.props;
+---
+
+
+<a href={url} class="text-[20px] font-medium py-[5px] px-[11px] border border-[#8059FF] bg-[#8059FF] rounded-[15px] text-[#FFFFFF] hover:text-[#8059FF]  hover:bg-transparent">{text}</a>
