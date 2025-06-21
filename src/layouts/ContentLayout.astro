@@ -21,14 +21,29 @@ const { title, description } = Astro.props;
   <title>{title}</title>
   {description && <meta name="description" content={description} />}
 </head>
-<body class="bg-[#F0F0F0] relative">
+<body class="bg-[#F0F0F0] relative ">
   <HeaderComponetLayout />
   
   <main class="w-full px-[10%] gap-20 flex flex-col z-30 relative">
     <slot /> 
     
   </main>
-  <img src="/public/images/photos/img-fondo-footer.png" alt="IImagen de fondo pie de página" class=" absolute w-full bottom-0 z-10">
   <FooterComponentLayout />
+
+  <div class="absolute overflow-hidden w-full h-dvw max-h-dvw z-0 bottom-0 bg-gradient-to-t from-[#1c0748] via-[#502caf] to-white shadow-[0px_-50px_100px_0px_#ffffff]" >
+    <!-- CIRCULO PRINCIPAL -->
+    <div class="shadow-[inset_0px_0px_100px_50px_#6229b9] bg-[#0e0228] w-[1800px] h-[1800px]  rounded-full absolute -bottom-[70%] left-1/2 -translate-x-1/2 z-10"></div>
+
+    <!-- INICIO BRUBUJAS -->
+    <div class="size-[100px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[400px] left-10 animate-[bounce_5s_infinite] z-10"></div>
+    <div class="size-[50px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[500px] left-[50%]  translate-x-1/2 animate-[bounce_8s_infinite] z-10"></div>
+    <div class="size-[60px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[700px] left-48   animate-[bounce_8s_infinite] z-10"></div>
+    <div class="size-[70px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[550px] left-[20%] animate-[bounce_6s_infinite] z-10"></div>
+    <div class="size-[100px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[800px] left-[30%]  animate-[bounce_8s_infinite] z-10"></div>
+    <div class="size-[50px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[750px] right-[40%]   animate-[bounce_8s_infinite] z-10"></div>
+    <div class="size-[80px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[600px] right-[10%]   animate-[bounce_8s_infinite] z-10"></div>
+    <div class="size-[70px] rounded-full shadow-[inset_0px_5px_5px_2px_#6229b9]  bg-transparent absolute bottom-[200px] right-10 animate-[bounce_6s_infinite] z-10"></div>
+    <!-- FIN DE BURBUJAS -->
+  </div>
 </body>
 </html>
