@@ -1,184 +1,306 @@
 ---
 // src/pages/index.astro
-import { number } from "astro:schema";
-import ContentLayout from "../layouts/ContentLayout.astro";
-import CardPasosCommonComponent from "../components/common/CardPasosCommonComponent.astro";
-import InputComponent from "../components/ui/InputComponent.astro";
+import { number } from 'astro:schema';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import CardPasosCommonComponent from '../components/common/CardPasosCommonComponent.astro';
+import InputComponent from '../components/ui/InputComponent.astro';
 
 const listPasos = [
-	{
-		number: 1,
-		title: "Crea tu usuario",
-		description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam molestiae, labore voluptas itaque odio totam, explicabo, ut asperiores qui aspernatur eius quos porro accusamus dolore odit tempore quia dolorem expedita?",
-		urlImg: "/public/images/photos/paso-1-crea-tu-usuario.png",
-		altImg: "Paso 1, crea tu usuario"
-	},
-	{
-		number: 2,
-		title: "Publica tu espacio",
-		description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam molestiae, labore voluptas itaque odio totam, explicabo, ut asperiores qui aspernatur eius quos porro accusamus dolore odit tempore quia dolorem expedita?",
-		urlImg: "/public/images/photos/paso-2-publica-tu-espacio.png",
-		altImg: "Paso 2, Publica tu espacio"
-	},
-	{
-		number: 3,
-		title: "Comienza a generar ingresos",
-		description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam molestiae, labore voluptas itaque odio totam, explicabo, ut asperiores qui aspernatur eius quos porro accusamus dolore odit tempore quia dolorem expedita?",
-		urlImg: "/public/images/photos/paso-3-comienza-a-generar-ingresos.png",
-		altImg: "Paso 3, comienza a generar ingresos"
-	}
+  {
+    number: 1,
+    title: 'Crea tu usuario',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam molestiae, labore voluptas itaque odio totam, explicabo, ut asperiores qui aspernatur eius quos porro accusamus dolore odit tempore quia dolorem expedita?',
+    urlImg: '/public/images/photos/paso-1-crea-tu-usuario.png',
+    altImg: 'Paso 1, crea tu usuario',
+  },
+  {
+    number: 2,
+    title: 'Publica tu espacio',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam molestiae, labore voluptas itaque odio totam, explicabo, ut asperiores qui aspernatur eius quos porro accusamus dolore odit tempore quia dolorem expedita?',
+    urlImg: '/public/images/photos/paso-2-publica-tu-espacio.png',
+    altImg: 'Paso 2, Publica tu espacio',
+  },
+  {
+    number: 3,
+    title: 'Comienza a generar ingresos',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam molestiae, labore voluptas itaque odio totam, explicabo, ut asperiores qui aspernatur eius quos porro accusamus dolore odit tempore quia dolorem expedita?',
+    urlImg: '/public/images/photos/paso-3-comienza-a-generar-ingresos.png',
+    altImg: 'Paso 3, comienza a generar ingresos',
+  },
 ];
 ---
 
-<ContentLayout title="Página de Inicio | WEB-SPACUZ" description="Bienvenido a mi sitio con Astro">
-
-	<!-- SECCION BANNER  -->
+<ContentLayout
+  title="Página de Inicio | WEB-SPACUZ"
+  description="Bienvenido a mi sitio con Astro"
+>
+  <!-- SECCION BANNER  -->
   <section class="flex gap-5">
-	<div class="flex flex-col justify-center w-1/2 gap-6">
-		<h1 class="text-[52px] leading-[130%] font-semibold text-pretty text-[#120F21]">Podrías ganar más de S/ 3,000 al mes alquilando tu local en Spaciuz</h1>
-		<p class="text-[24px] leading-[140%] text-[#44495D] text-pretty">La mayoría de locales registrados se alquilan desde S/750 por día. Con solo dos reservas al mes, podrías generar S/1,500 o más.</p>
-		<a href="#formulario" class="rounded-3xl text-white bg-linear-to-r from-[#181B8C] to-[#684ED8] text-[31px] px-[46px] py-[19px] w-fit font-semibold">Regístrate ahora</a>
-	</div>
-	<div class="flex flex-col items-center  justify-end w-1/2 ">
-		<img src="/public/images/photos/banner-map.png" alt="" class="w-full ">
+    <div class="flex flex-col justify-center w-1/2 gap-6">
+      <h1
+        class="text-[52px] leading-[130%] font-semibold text-pretty text-[#120F21]"
+      >
+        Podrías ganar más de S/ 3,000 al mes alquilando tu local en Spaciuz
+      </h1>
+      <p class="text-[24px] leading-[140%] text-[#44495D] text-pretty">
+        La mayoría de locales registrados se alquilan desde S/750 por día. Con
+        solo dos reservas al mes, podrías generar S/1,500 o más.
+      </p>
+      <a
+        href="#formulario"
+        class="rounded-3xl text-white bg-linear-to-r from-[#181B8C] to-[#684ED8] text-[31px] px-[46px] py-[19px] w-fit font-semibold"
+        >Regístrate ahora</a
+      >
+    </div>
+    <div class="flex flex-col items-center justify-end w-1/2">
+      <img src="/public/images/photos/banner-map.png" alt="" class="w-full" />
 
-		<div class="flex items-center gap-4">
-			<span class="text-[20px]">Respaldado por: </span>
-			<img src="/public/images/logos/button-innova-ulima.png" alt="">
-		</div>
-	</div>
+      <div class="flex items-center gap-4">
+        <span class="text-[20px]">Respaldado por: </span>
+        <img src="/public/images/logos/button-innova-ulima.png" alt="" />
+      </div>
+    </div>
   </section>
 
-	<!-- SECCIÓN BENEFICIOS -->
-  <section class="w-full flex items-center  justify-center gap-80" id="beneficios">
-	<div class=" flex flex-col items-center justify-center gap-3 w-[165px]">
-		<div class="size-[97px] text-[48px] flex items-center justify-center border-[3px] rounded-full border-[#DACEFF]">🍾</div>
-		<span class="text-[28px] leading-[110%] text-center font-semibold">Rentabiliza tu espacio</span>
-	</div>
-	<div class=" flex flex-col items-center justify-center gap-3 w-[170px] ">
-		<div class="size-[97px] text-[48px] flex items-center justify-center border-[3px] rounded-full border-[#DACEFF]">🎉</div>
-		<span class="text-[28px] leading-[110%] text-center font-semibold">Conecta con más usuarios</span>
-	</div>
-	<div class=" flex flex-col items-center justify-center gap-3 w-[165px]">
-		<div class="size-[97px] text-[48px] flex items-center justify-center border-[3px] rounded-full border-[#DACEFF]">🚀</div>
-		<span class="text-[28px] leading-[110%] text-center font-semibold ">Haz crecer tu negocio</span>
-	</div>
+  <!-- SECCIÓN BENEFICIOS -->
+  <section
+    class="w-full flex items-center justify-center gap-80"
+    id="beneficios"
+  >
+    <div class="flex flex-col items-center justify-center gap-3 w-[165px]">
+      <div
+        class="size-[97px] text-[48px] flex items-center justify-center border-[3px] rounded-full border-[#DACEFF]"
+      >
+        🍾
+      </div>
+      <span class="text-[28px] leading-[110%] text-center font-semibold"
+        >Rentabiliza tu espacio</span
+      >
+    </div>
+    <div class="flex flex-col items-center justify-center gap-3 w-[170px]">
+      <div
+        class="size-[97px] text-[48px] flex items-center justify-center border-[3px] rounded-full border-[#DACEFF]"
+      >
+        🎉
+      </div>
+      <span class="text-[28px] leading-[110%] text-center font-semibold"
+        >Conecta con más usuarios</span
+      >
+    </div>
+    <div class="flex flex-col items-center justify-center gap-3 w-[165px]">
+      <div
+        class="size-[97px] text-[48px] flex items-center justify-center border-[3px] rounded-full border-[#DACEFF]"
+      >
+        🚀
+      </div>
+      <span class="text-[28px] leading-[110%] text-center font-semibold"
+        >Haz crecer tu negocio</span
+      >
+    </div>
   </section>
 
   <!-- PRESENTACIÓN DE SPACIUZ -->
   <section class="w-full flex gap-4">
-	<div class="flex w-1/3 items-center">
-		<h2 class="text-[48px] leading-[130%] font-semibold">Interfaz intuitiva para localizar espacios.</h2>
-	</div>
-	<div class="w-2/3">
-		<img src="/public/images/photos/banner-2-spaciuz-presentation.png" alt="Presentación de la plataforma Spaciuz" class="w-full">
-	</div>
+    <div class="flex w-1/3 items-center">
+      <h2 class="text-[48px] leading-[130%] font-semibold">
+        Interfaz intuitiva para localizar espacios.
+      </h2>
+    </div>
+    <div class="w-2/3">
+      <img
+        src="/public/images/photos/banner-2-spaciuz-presentation.png"
+        alt="Presentación de la plataforma Spaciuz"
+        class="w-full"
+      />
+    </div>
   </section>
 
-	<!-- SECCIÓN INFORMACIÓN DE SPACIUZ -->
-  <section class="w-full flex flex-col items-center justify-center gap-20 relative py-10">
-	<img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz">
-	<p class="text-[48px] font-semibold w-[40%] text-center"> <span class="bg-[#DCD1FF] rounded-[15px] p-[7px]">Súmate</span>a la plataforma de confianza que conecta usuarios con propietarios.</p>
-	<div class="shadow-[inset_0px_0px_11px_7px_#ffffff] w-[520px] bg-linear-to-t from-[#FFFFF] to-transparent  rounded-2xl z-10">
-		<div class="flex gap-5 bg-clip-text text-transparent px-[42px] py-[28px] bg-linear-to-r from-[#181B8C] to-[#684ED8] items-center z-10 justify-end">
-			<span class="text-[50px] font-bold">+150K</span>
-			<p class="text-[35px] font-semibold">eventos al año</p>
-		</div>
-	</div>
+  <!-- SECCIÓN INFORMACIÓN DE SPACIUZ -->
+  <section
+    class="w-full flex flex-col items-center justify-center gap-20 relative py-10"
+  >
+    <img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz" />
+    <p class="text-[48px] font-semibold w-[40%] text-center">
+      <span class="bg-[#DCD1FF] rounded-[15px] p-[7px]">Súmate</span>a la
+      plataforma de confianza que conecta usuarios con propietarios.
+    </p>
+    <div
+      class="shadow-[inset_0px_0px_11px_7px_#ffffff] w-[520px] bg-linear-to-t from-[#FFFFF] to-transparent rounded-2xl z-10"
+    >
+      <div
+        class="flex gap-5 bg-clip-text text-transparent px-[42px] py-[28px] bg-linear-to-r from-[#181B8C] to-[#684ED8] items-center z-10 justify-end"
+      >
+        <span class="text-[50px] font-bold">+150K</span>
+        <p class="text-[35px] font-semibold">eventos al año</p>
+      </div>
+    </div>
 
-	<div class="shadow-[inset_0px_0px_11px_7px_#ffffff] w-[520px] bg-linear-to-t from-[#FFFFF] to-transparent  rounded-2xl z-10">
-		<div class="flex gap-5 bg-clip-text text-transparent px-[42px] py-[28px] bg-linear-to-r from-[#181B8C] to-[#684ED8] items-center z-10 justify-end">
-			<span class="text-[50px] font-bold">+8K</span>
-			<p class="text-[35px] font-semibold">reservas al mes</p>
-		</div>
-	</div>
-	<a href="#formulario" class="rounded-3xl text-white font-semibold bg-linear-to-r from-[#181B8C] to-[#684ED8] text-[31px] px-[46px] py-[19px] w-fit">Regístrate ahora</a>
+    <div
+      class="shadow-[inset_0px_0px_11px_7px_#ffffff] w-[520px] bg-linear-to-t from-[#FFFFF] to-transparent rounded-2xl z-10"
+    >
+      <div
+        class="flex gap-5 bg-clip-text text-transparent px-[42px] py-[28px] bg-linear-to-r from-[#181B8C] to-[#684ED8] items-center z-10 justify-end"
+      >
+        <span class="text-[50px] font-bold">+8K</span>
+        <p class="text-[35px] font-semibold">reservas al mes</p>
+      </div>
+    </div>
+    <a
+      href="#formulario"
+      class="rounded-3xl text-white font-semibold bg-linear-to-r from-[#181B8C] to-[#684ED8] text-[31px] px-[46px] py-[19px] w-fit"
+      >Regístrate ahora</a
+    >
 
-	<!-- LOGOS FLOTANTES IZQUIERDO-->
-	<img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz" class="absolute top-30 left-10 size-[145px] z-10">
-	<img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz" class="absolute top-[45%]  left-56 size-[78px] z-10">
-	<img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz" class="absolute bottom-40 left-10 size-[145px] z-10">
+    <!-- LOGOS FLOTANTES IZQUIERDO-->
+    <img
+      src="/public/images/logos/isologo.png"
+      alt="isologo de Spaciuz"
+      class="absolute top-30 left-10 size-[145px] z-10"
+    />
+    <img
+      src="/public/images/logos/isologo.png"
+      alt="isologo de Spaciuz"
+      class="absolute top-[45%] left-56 size-[78px] z-10"
+    />
+    <img
+      src="/public/images/logos/isologo.png"
+      alt="isologo de Spaciuz"
+      class="absolute bottom-40 left-10 size-[145px] z-10"
+    />
 
-	<!-- LOGOS FLOTANTES DERECHO-->
-	<img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz" class="absolute top-0 right-10 size-[78px] z-10">
-	<img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz" class="absolute top-[30%]  right-52 size-[78px] z-10">
-	<img src="/public/images/logos/isologo.png" alt="isologo de Spaciuz" class="absolute bottom-52 right-5 size-[145px] z-10">
+    <!-- LOGOS FLOTANTES DERECHO-->
+    <img
+      src="/public/images/logos/isologo.png"
+      alt="isologo de Spaciuz"
+      class="absolute top-0 right-10 size-[78px] z-10"
+    />
+    <img
+      src="/public/images/logos/isologo.png"
+      alt="isologo de Spaciuz"
+      class="absolute top-[30%] right-52 size-[78px] z-10"
+    />
+    <img
+      src="/public/images/logos/isologo.png"
+      alt="isologo de Spaciuz"
+      class="absolute bottom-52 right-5 size-[145px] z-10"
+    />
 
-	<!-- BLUR IZQUIERDO -->
-	 <div class="absolute size-[686px] bg-linear-to-r from-[#2587FF] to-transparent rounded-full rotate-[74deg] blur-[350px] -left-[20%]"></div>
-	 <div class="absolute size-[976px] bg-linear-to-b from-[#8059FF] to-white rounded-full -bottom-40 blur-[250px] -right-[40%]"></div>
+    <!-- BLUR IZQUIERDO -->
+    <div
+      class="absolute size-[686px] bg-linear-to-r from-[#2587FF] to-transparent rounded-full rotate-[74deg] blur-[350px] -left-[20%]"
+    >
+    </div>
+    <div
+      class="absolute size-[976px] bg-linear-to-b from-[#8059FF] to-white rounded-full -bottom-40 blur-[250px] -right-[40%]"
+    >
+    </div>
   </section>
 
   <!-- SECCIÓN CARD -->
-  <section class="w-full  h-auto overflow-hidden rounded-[60px] flex relative">
-	<img src="/public/images/photos/card-doble-img.png" alt="" class="w-full saturate-100">
-	<p class="text-white font-semibold text-[42px] leading-[104%] w-[20%] flex absolute top-[50%] transform -translate-y-1/2 left-[5%] z-30">Conecta fácilmente con usuarios</p>
-	<p class="text-white font-semibold text-[42px] leading-[104%] w-[20%] flex absolute top-[50%] text-right transform -translate-y-1/2 right-[5%] z-30">y genera ingresos con tus espacios</p>
-	<div class="size-[519px] bg-[#2587FF] rounded-full absolute -bottom-[80%] -left-[15%] blur-[317px] z-10"></div>
-	<div class="size-[519px] bg-[#2587FF] rounded-full absolute -top-[80%] -right-[15%] blur-[317px] z-10"></div>
+  <section class="w-full h-auto overflow-hidden rounded-[60px] flex relative">
+    <img
+      src="/public/images/photos/card-doble-img.png"
+      alt=""
+      class="w-full saturate-100"
+    />
+    <p
+      class="text-white font-semibold text-[42px] leading-[104%] w-[20%] flex absolute top-[50%] transform -translate-y-1/2 left-[5%] z-30"
+    >
+      Conecta fácilmente con usuarios
+    </p>
+    <p
+      class="text-white font-semibold text-[42px] leading-[104%] w-[20%] flex absolute top-[50%] text-right transform -translate-y-1/2 right-[5%] z-30"
+    >
+      y genera ingresos con tus espacios
+    </p>
+    <div
+      class="size-[519px] bg-[#2587FF] rounded-full absolute -bottom-[80%] -left-[15%] blur-[317px] z-10"
+    >
+    </div>
+    <div
+      class="size-[519px] bg-[#2587FF] rounded-full absolute -top-[80%] -right-[15%] blur-[317px] z-10"
+    >
+    </div>
   </section>
 
-
   <section class="w-full flex flex-col gap-20">
-	<h2 class="text-[48px] font-semibold">Publica en 3 simples pasos</h2>
+    <h2 class="text-[48px] font-semibold">Publica en 3 simples pasos</h2>
 
-	{
-		listPasos.map(({number, title, description, urlImg, altImg}) => (
-			<CardPasosCommonComponent
-			number={number}
-			title={title}
-			description={description}
-			urlImg={urlImg}
-			altImg={altImg}
-			/>
-		))
-	}
+    {
+      listPasos.map(({ number, title, description, urlImg, altImg }) => (
+        <CardPasosCommonComponent
+          number={number}
+          title={title}
+          description={description}
+          urlImg={urlImg}
+          altImg={altImg}
+        />
+      ))
+    }
   </section>
 
   <section class="w-full flex gap-40" id="formulario">
-	<div class="w-1/2 flex justify-end">
-		<div class="w-[70%] flex flex-col gap-6">
-			<h3 class="text-[58px] leading-[130%] text-white  font-semibold text-end">Publica gratis tus espacios.</h3>
-			<p class="text-[#B19CF6] text-[38px] font-semibold leading-[138%] text-end">Y deja que Spaciuz te ayude a ahcerlo rentable</p>
-		</div>
-
-	</div>
-	<div class="w-1/2 flex flex-col items-start ">
-			<form action="" class="w-[80%] flex flex-col gap-8">
-				<InputComponent
-					urlicon="😇",
-					placeholder="Nombre completo"
-					name="name"
-					id=""
-					required
-					type="text"
-				/>
-
-				<InputComponent
-					urlicon="💌",
-					placeholder="ejemplo@email.com"
-					name="email"
-					id=""
-					required
-					type="email"
-				/>
-
-				<InputComponent
-					urlicon="📱",
-					placeholder="Número de teléfono"
-					name="telefono"
-					id=""
-					required
-					type="number"
-				/>
-
-				<button type="submit" class="text-[24px] font-semibold text-white border border-[#8059FF] bg-[#8059FF] text-center w-full py-[10px] rounded-[22px] cursor-pointer hover:opacity-80">Enviar mis datos</button>
-			</form>
-
-	</div>
+    <div class="w-1/2 flex justify-end">
+      <div class="w-[70%] flex flex-col gap-6">
+        <h3
+          class="text-[58px] leading-[130%] text-white font-semibold text-end"
+        >
+          Publica gratis tus espacios.
+        </h3>
+        <p
+          class="text-[#B19CF6] text-[38px] font-semibold leading-[138%] text-end"
+        >
+          Y deja que Spaciuz te ayude a ahcerlo rentable
+        </p>
+      </div>
+    </div>
+    <div class="w-1/2 flex flex-col items-start">
+      <form action="" class="w-[80%] flex flex-col gap-8">
+        <InputComponent
+          urlicon="😇"
+          ,
+          placeholder="Nombre completo"
+          name="name"
+          id=""
+          required
+          type="text"
+        />
+        <InputComponent
+          urlicon="💌"
+          ,
+          placeholder="ejemplo@email.com"
+          name="email"
+          id=""
+          required
+          type="email"
+        />
+        <InputComponent
+          urlicon="📱"
+          ,
+          placeholder="Número de teléfono"
+          name="telefono"
+          id=""
+          required
+          type="number"
+        />
+        <button
+          type="submit"
+          class="text-[24px] font-semibold text-white border border-[#8059FF] bg-[#8059FF] text-center w-full py-[10px] rounded-[22px] cursor-pointer hover:opacity-80"
+          >Enviar mis datos</button
+        >
+      </form>
+    </div>
   </section>
 
-  <section class="w-full flex items-center justify-center pb-[195px] pt-[261px]">
-	<img src="/public/images/logos/logo-spaciuz-blanco.png" alt="Logo Spaciuz pie de página">
+  <section
+    class="w-full flex items-center justify-center pb-[195px] pt-[261px]"
+  >
+    <img
+      src="/public/images/logos/logo-spaciuz-blanco.png"
+      alt="Logo Spaciuz pie de página"
+    />
   </section>
 </ContentLayout>

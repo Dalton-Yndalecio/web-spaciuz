@@ -1,26 +1,36 @@
 ---
 export interface Props {
-    urlicon?: string,
-    placeholder: string,
-    name?: string,
-    id?: string;
-    required?: boolean,
-    type?: astroHTML.JSX.HTMLInputTypeAttribute,
-    autocomplete?: string,
+  urlicon?: string;
+  placeholder: string;
+  name?: string;
+  id?: string;
+  required?: boolean;
+  type?: astroHTML.JSX.HTMLInputTypeAttribute;
+  autocomplete?: string;
 }
 
-const {urlicon = "💌", placeholder, name, id, required, type = "text", autocomplete = "off"} = Astro.props;
+const {
+  urlicon = '💌',
+  placeholder,
+  name,
+  id,
+  required,
+  type = 'text',
+  autocomplete = 'off',
+} = Astro.props;
 ---
-<div class="flex w-full border p-[20px] items-center  border-white rounded-[22px] gap-5 hover:border-[#9F87FF]">
-    <label for="" class="text-[20px] text-[#9F87FF]">{urlicon}</label>
-    <input 
-        class="text-[20px] text-[#9F87FF] border-transparent focus:border-transparent focus:outline-none w-full" 
-        type={type} 
-        placeholder={placeholder} 
-        name={name} 
-        id={id} 
-        required={required}
-        autocomplete={autocomplete}
-    >
-</div>
 
+<div
+  class="flex w-full border p-[20px] items-center border-white rounded-[22px] gap-5 hover:border-[#9F87FF]"
+>
+  <label for={id} class="text-[20px] text-[#9F87FF]">{urlicon}</label>
+  <input
+    class="text-[20px] text-[#9F87FF] border-transparent focus:border-transparent focus:outline-none w-full"
+    type={type}
+    placeholder={placeholder}
+    name={name}
+    id={id}
+    required={required}
+    autocomplete={autocomplete}
+  />
+</div>
