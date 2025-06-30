@@ -24,20 +24,22 @@ const { title, description } = Astro.props;
   <body class="bg-[#F0F0F0] relative">
     <HeaderComponetLayout />
 
-    <main class="w-full px-[5%] lg:px-[10%] gap-20 flex flex-col z-30 relative overflow-x-hidden">
+    <main
+      class="w-full px-[5%] lg:px-[10%] gap-20 flex flex-col z-30 relative overflow-x-hidden"
+    >
       <slot />
     </main>
 
     <FooterComponentLayout />
 
-    <div 
-      class="absolute overflow-hidden w-full h-[40%] lg:h-dvw lg:max-h-dvw z-0 bottom-0 bg-gradient-to-t from-[#1c0748] via-[#502caf] to-white shadow-[0px_-50px_100px_0px_#ffffff]"
+    <div
+      class="absolute overflow-hidden w-full h-[40%] lg:h-dvw lg:max-h-dvw z-0 bottom-0 [background-image:linear-gradient(to_bottom,#FFFFFF,#9373f3,#270a69,#0d0123)] shadow-[0px_-50px_100px_0px_#ffffff]"
     >
       <!-- CIRCULO PRINCIPAL -->
-      <div
+      <!--div
         class="shadow-[inset_0px_0px_70px_50px_#6229b9] lg:shadow-[inset_0px_0px_100px_50px_#6229b9] bg-[#0e0228] w-[700px] lg:w-[1800px] h-[700px] lg:h-[1800px] rounded-full absolute -bottom-[16%] lg:-bottom-[70%] left-1/2 -translate-x-1/2 z-10"
       >
-      </div>
+      </div-->
 
       <!-- INICIO BRUBUJAS -->
       <div
@@ -74,6 +76,5 @@ const { title, description } = Astro.props;
       </div>
       <!-- FIN DE BURBUJAS -->
     </div>
-
   </body>
 </html>
