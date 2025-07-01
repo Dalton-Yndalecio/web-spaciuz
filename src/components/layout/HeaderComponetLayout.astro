@@ -9,21 +9,23 @@ const links = [
 ];
 ---
 
-<header class="flex h-[61px] w-full px-[10%] pt-[50px] pb-[100px]">
+<header class="flex h-[61px] w-full px-[5%] lg:px-[10%] pt-[50px] pb-[100px]">
   <div class="flex items-center lg:justify-start lg:w-1/3">
     <img
       src="/images/logos/logo-spaciuz.png"
       alt="Logo Spaciuz"
-      class="h-[61px]"
+      class="h-[61px] hidden lg:block"
     />
+
+    <img src="/public/images/logos/isologo.png" alt="Logo mobile Spaciuz" class="size-[61px] lg:hidden">
   </div>
-  <div class="hidden lg:flex items-center justify-end w-2/3 gap-24">
-    <div class="items-center justify-center space-x-10">
+  <div class="flex items-center justify-end w-full lg:w-2/3 gap-5 lg:gap-24 ">
+    <div class="items-center justify-center  space-x-3 lg:space-x-10">
       {
         links.map(({ text, url }) => (
           <a
             href={url}
-            class="text-[20px] font-semibold cursor-pointer hover:text-[#8059FF]"
+            class="text-[15px] lg:text-[20px] font-semibold cursor-pointer hover:text-[#8059FF]"
           >
             {text}
           </a>
